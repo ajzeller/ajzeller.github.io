@@ -52,7 +52,7 @@
 				});
 
 			});
-        
+
         $(function() {
                  $('#poptrox').poptrox({
                      usePopupCaption:false
