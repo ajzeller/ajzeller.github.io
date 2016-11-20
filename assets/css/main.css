@@ -1087,16 +1087,23 @@
 		}
 
 	a {
-		-moz-transition: color .2s ease-in-out;
+		color: #888;
+		font-weight: 300;
+		-moz-transition: color 0.2s ease, border-bottom 0.2s ease;
+		-webkit-transition: color 0.2s ease, border-bottom 0.2s ease;
+		-ms-transition: color 0.2s ease, border-bottom 0.2s ease;
+		text-decoration: none;
+		border-bottom: dotted 1px;
+		/*-moz-transition: color .2s ease-in-out;
 		-webkit-transition: color .2s ease-in-out;
 		-ms-transition: color .2s ease-in-out;
 		transition: color .2s ease-in-out;
 		color: #43B3E0;
-		text-decoration: underline;
+		text-decoration: underline;*/
 	}
 
 		a:hover {
-			color: #0099CC ;
+			border-bottom-color: transparent;
 		}
 
 		a img {
@@ -1125,20 +1132,23 @@
         color:#282828;
         text-shadow: none;
     }
-    b.dark:hover {
-        text-decoration: underline;
-    }
+
 
 		#link_underline {
 			color: #888;
 			font-weight: 300;
+			-moz-transition: color 0.2s ease, border-bottom 0.2s ease;
+			-webkit-transition: color 0.2s ease, border-bottom 0.2s ease;
+			-ms-transition: color 0.2s ease, border-bottom 0.2s ease;
 			text-decoration: none;
+			border-bottom: dotted 1px;
 		}
 
 		#link_underline:hover {
 			color: #888;
 			font-weight: 300;
-      text-decoration: underline;
+			border-bottom-color: transparent;
+			color: rgba(251,251,251, 1);
     }
 
 	i, em {
@@ -1474,9 +1484,17 @@
 			padding-left: 0em;
 		}
 
+		ul.bulleted_list {
+			list-style-type: circle;
+		}
+
+		ul.bulleted_list li {
+			text-align: left;
+		}
+
 	ul.social {
 		cursor: default;
-		margin: 2em;
+		margin: 1em;
 	}
 
 		ul.social li {
@@ -1509,12 +1527,13 @@
 					-ms-transition: background-color .2s ease-in-out;
 					transition: background-color .2s ease-in-out;*/
 					background-color: transparent;
+					border: none;
 					border-radius: 20%;
 					/*box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);*/
 					padding: .5em;
 					display: block;
 					font-size: 1.5em;
-					height: 2em;
+					min-height: 2em;
 					width: 2em;
 					line-height: 48px;
 					text-align: center;
@@ -1721,7 +1740,7 @@
 		}
 
         .wrapper.style5 {
-			background-color: #282828;
+			background-color: rgba(166, 171, 174, 0.7);
 		}
 
         .wrapper.short {
@@ -1905,7 +1924,7 @@
 
 			#final_footer {
 				background-color: #F6F9FC;
-				padding: 0em 0 2em 0 ;
+				padding: 0 0 2em 0 ;
 
 			}
 
@@ -2038,7 +2057,7 @@
 				#top p {
 					font-size: 1.5em;
 					line-height: 1.75em;
-          color: #FBFBFB;
+          color: rgba(251,251,251,.7);
 					text-shadow: 0 0 20px rgba(0,0,0,.4);
 
 
@@ -2119,6 +2138,10 @@
 					padding: 2em 0 2em 0;
 				}
 
+				.wrapper.style4 {
+					padding: 5em 0 1em 0;
+				}
+
 					.wrapper.style1 {
 						background-size: auto 100%;
 					}
@@ -2167,11 +2190,25 @@
 				}
 
 			footer {
-				margin: 1em 0 0 0;
+				margin: 0;
+				padding: 0em 0 2em 0 ;
+				text-align: center;
+				background-color: #F6F9FC;
 			}
+
+
 
 				footer > p {
 					font-size: 1.25em;
+				}
+
+				.footer_form {
+					margin: auto;
+					width: 95%;
+					padding: 1.5em;
+					border: 1px solid #DDD;
+					border-radius: .5em;
+
 				}
 
 			hr {
@@ -2195,16 +2232,21 @@
 				font-size: 1.2em;
 				width: 100%;
 				padding: 1em 0 1em 0;
+				/*border: 2px solid #3e9ed5;*/
+				/*background-color: ;*/
+				/*box-shadow: 0px 0px 15px 0px #282828;*/
 			}
 
 		/* List */
 
 			ul.social {
-				padding: 1em 0.5em 0 0.5em;
+				padding: 0em;
+				margin: 1em 0 0 0;
 			}
 
 				ul.social li {
-					margin: 0.5em 0.5em 0.5em 0.5em;
+					/*margin: 0.5em 0.5em 0.5em 0.5em;*/
+
 				}
 
 					ul.social li a {
@@ -2227,6 +2269,10 @@
 					ul.actions li:first-child {
 						margin-top: 0;
 					}
+
+
+
+
 
 		/* Box */
 
@@ -2255,7 +2301,7 @@
 		/* Wrappers */
 
 			.wrapper {
-				padding: 3em 15px 3em 15px;
+				padding: 3em 1.5em 3em 1.5em;
 				text-align: center;
 
 			}
@@ -2266,9 +2312,13 @@
 
 				.wrapper.style1 {
 					background-size: 100% auto ;
-					background-color: #E0BB8B;
-						/*rgba(0, 138, 184, 0.2);*/
-								background-repeat: no-repeat;
+					background-color: rgba(98, 182, 231, 1);
+					/*rgba(0, 138, 184, 0.4);*/
+					background-image: none;
+				}
+
+				.wrapper.style4 {
+					padding: 3em 1.5em 0em 1.5em;
 				}
 
 		/* Nav */
