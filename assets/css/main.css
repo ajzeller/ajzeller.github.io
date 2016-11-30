@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
+/*@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");*/
 @import url("font-awesome.min.css");
 
 /*
@@ -1093,7 +1093,7 @@
 		-webkit-transition: color 0.2s ease, border-bottom 0.2s ease;
 		-ms-transition: color 0.2s ease, border-bottom 0.2s ease;
 		text-decoration: none;
-		border-bottom: dotted 1px;
+		/*border-bottom: dotted 1px;*/
 		/*-moz-transition: color .2s ease-in-out;
 		-webkit-transition: color .2s ease-in-out;
 		-ms-transition: color .2s ease-in-out;
@@ -1148,7 +1148,6 @@
 			color: #888;
 			font-weight: 300;
 			border-bottom-color: transparent;
-			color: rgba(251,251,251, 1);
     }
 
 	i, em {
