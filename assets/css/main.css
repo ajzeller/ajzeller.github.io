@@ -1207,11 +1207,9 @@
 
 	hr {
 		border: 0;
-		border-top: solid 1px #444;
-		border-top-color: rgba(0, 0, 0, 0.35);
-		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
-		height: 1px;
-		margin: 3em 0 4em 0;
+		border-top: solid 2px #F7FAFC;
+		height: 2px;
+		margin: 1em 0 0.5em 0;
 	}
 
 	p, ul, ol, dl, table {
@@ -1367,11 +1365,12 @@
             box-shadow: 0px 0px 15px 0px #282828;
 		}
 
-		.image.featured {
+		.image.featured img{
 			display: block;
 			width: 100%;
-			margin: 0 0 2em 0;
-			border-radius: .5em;
+			margin: 0 0 0em 0;
+			border-top-left-radius: .5em;
+			border-top-right-radius: .5em;
 		}
 
 		.image.left {
@@ -1387,6 +1386,26 @@
 			.image.centered img {
 				margin: 0 auto;
 				width: auto;
+			}
+
+			.box.company {
+				min-height: 18em;
+			}
+
+			.box.company img{
+				position: relative;
+				display: block;
+				margin: 2em auto;
+				width: 90%;
+				opacity: 1;
+			}
+
+			.box.style1{
+				border-radius: .5em;
+			}
+
+			.box.style2{
+				border-radius: .5em;
 			}
 
 /* Button */
@@ -1567,7 +1586,7 @@
 					color: #006599;
 				}
 
-				ul.social li a.fa-linkedin {
+				ul.social li a.fa-linkedin:hover {
 					color: #015783;
 				}
 
@@ -1580,7 +1599,11 @@
 				}
 
 				ul.social li a.fa-github {
-					background-color: #FAFAFA;
+					color: #333333;
+				}
+
+				ul.social li a.fa-github:hover {
+					color: #4078c0;
 				}
 
 				ul.social li a.fa-rss {
@@ -1732,7 +1755,6 @@
 		}
 
 		.wrapper.style2 {
-
 			text-shadow: 1px 1px 0px #fff;
 		}
 
@@ -1761,6 +1783,11 @@
     			background: linear-gradient(rgba(98, 182, 231, 1), rgba(90, 110, 150, 1)); /* Standard syntax */
 		}
 
+		.wrapper.style6 {
+
+			text-shadow: 1px 1px 0px #fff;
+			background-color: #FFF;
+		}
         .wrapper.short {
 			box-shadow: none;
 		}
@@ -1811,6 +1838,7 @@
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
+		border-top: 3px solid rgba(98, 182, 231, 1);
 	}
 
 		#nav ul {
@@ -1872,6 +1900,14 @@
 			border-radius: 50%;
 		}
 
+		#about .image {
+			border-radius: 50%;
+		}
+
+		#about .image img {
+			border-radius: 50%;
+		}
+
 	#top p a {
 		color: inherit;
 	}
@@ -1901,6 +1937,35 @@
 				color: #777;
 			}
 
+/*Work Descriptions on Hover */
+
+.job_details{
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	-moz-transition: max-height .25s ease-in-out, opacity 1s ease-in-out;
+	-webkit-transition: max-height .25s ease-in-out, opacity 1s ease-in-out;
+	-ms-transition: max-height .25s ease-in-out, opacity 1s ease-in-out;
+	transition: max-height .25s ease-in-out, opacity 1s ease-in-out;
+}
+
+.box.style2:hover .job_details{
+	opacity: 1;
+	max-height: 500px;
+	overflow: visible;
+
+
+}
+
+.box.style2:hover img{
+	opacity: 0.8;
+	-moz-transition: opacity 0.25s ease-in-out;
+	-webkit-transition: opacity 0.25s ease-in-out;
+	-ms-transition: opacity 0.25s ease-in-out;
+	transition: opacity 0.25s ease-in-out;
+
+}
+
 /* Desktop */
 
 	@media screen and (min-width: 737px) {
@@ -1927,7 +1992,7 @@
 			}
 
 			h1, h2, h3, h4, h5, h6 {
-				margin: 0 0 0.5em 0;
+				margin: 0 0 1em 0;
 			}
 
 			header {
@@ -2008,6 +2073,11 @@
 
 				.box.style2 {
 					border-radius: .5em;
+					cursor: hand;
+					cursor: pointer;
+					transition: height 10s;
+
+
 				}
 
 				.box.style2 .image {
@@ -2016,9 +2086,18 @@
 					top: 2em;
 					margin: -4em 0 4em -4em;
 					width: auto;
-
 				}
 
+				.box.company {
+					min-height: 18em;
+				}
+
+				.box.company img{
+					position: relative;
+					display: block;
+					margin: 2em auto;
+					width: 90%;
+				}
 		/* Wrappers */
 
 			.wrapper {
@@ -2238,7 +2317,8 @@
 				}
 
 			hr {
-				margin: 1.5em 0 2em 0;
+				margin: 0.5em 0 0.5em 0;
+				color: #D6D5D6;
 			}
 
 		/* Section/Article */
@@ -2301,7 +2381,9 @@
 						margin-top: 0;
 					}
 
-
+					ul.bulleted_list {
+						margin: 0 1em;
+					}
 
 
 
@@ -2326,6 +2408,7 @@
 					top: 20px;
 					margin: -50px 0 50px -40px;
 					width: auto;
+					border-radius: 0.5em;
 
 				}
 
@@ -2338,7 +2421,7 @@
 			}
 
 				.wrapper.first {
-					padding-top: 5em;
+					padding-top: 7em;
 				}
 
 				.wrapper.style1 {
