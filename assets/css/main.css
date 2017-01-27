@@ -1388,6 +1388,10 @@
 				margin: 2em auto 0 auto;
 			}
 
+			.book {
+				border-radius: 0.35em;
+			}
+
 			.box.company {
 				min-height: 18em;
 			}
@@ -2177,7 +2181,7 @@
 			}
 
         .book{
-        max-width: 200px;
+        max-height: 300px;
         position: relative;
         display: inline-block;
         box-shadow: 2px 8px 10px #6E6E6E;
@@ -2467,15 +2471,11 @@
 				margin: 0 auto 1.75em auto;
 			}
 
-            #top p {
-					font-size: 1.25em;
-					line-height: 1.75em;
-                    color: #FBFBFB;
-
-                .book{
-                max-width: 150px;
-                margin: 1em;
-                }
+      #top p {
+				font-size: 1.25em;
+				line-height: 1.75em;
+        color: #FBFBFB;
+			}
 
 			#contact footer {
 				margin: 0;
