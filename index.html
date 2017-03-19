@@ -252,6 +252,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										<p><a href="https://github.com/ajzeller/theodinproject">The Odin Project</a></p>
 									</article>
 								</div>
+
+								<div class="4u 12u(mobile)">
+									<article class="box style2 initialism fadeandscale_postomatic_open btn btn-success" href="#fadeandscale_postomatic">
+										<a href="https://pacific-sands-34006.herokuapp.com/" class="image featured" ><img src="images/postomatic.png" alt="" /></a>
+										<h3><a href="https://pacific-sands-34006.herokuapp.com/">Post-O-Matic</a></h3>
+										<p><a href="https://github.com/ajzeller/theodinproject">Ruby on Rails</a></p>
+									</article>
+								</div>
+
+							</div>
+
+							<div class="row portfolio">
+
+								<div class="4u 12u(mobile)">
+									<article class="box style2 initialism fadeandscale_blogger_open btn btn-success" href="#fadeandscale_blogger">
+										<a href="https://cryptic-hollows-52698.herokuapp.com/" class="image featured" ><img src="images/blogger.png" alt="" /></a>
+										<h3><a href="https://cryptic-hollows-52698.herokuapp.com/">Blogger</a></h3>
+										<p><a href="https://github.com/ajzeller/rails_blogger">Ruby on Rails</a></p>
+									</article>
+								</div>
+
 							</div>
 
 
@@ -593,6 +614,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			}
 			</style>
 
+			<!-- Post-O-Matic Popup -->
+
+			<div id="fadeandscale_postomatic" class="well">
+				<button class="fadeandscale_postomatic_close btn btn-default btn-close">Close</button>
+					<h3>Post-O-Matic</h3>
+					<p>
+						I made <a href="https://pacific-sands-34006.herokuapp.com/" id="link_underline" target="_blank">this microposting app</a> following Michael Hartl's <i>Rails Tutorial</i> using Ruby on Rails, Bootstrap, and Heroku.
+						<br />
+						<a href="https://github.com/ajzeller/rails_tutorial_sample_app" id="link_underline" target="_blank">View project on Github</a>
+					</p>
+					<a href="https://pacific-sands-34006.herokuapp.com/" target="_blank"><img src="images/postomatic.png" alt="" /></a>
+			</div>
+
+			<style>
+			#fadeandscale_postomatic {
+					-webkit-transform: scale(0.8);
+						 -moz-transform: scale(0.8);
+							-ms-transform: scale(0.8);
+									transform: scale(0.8);
+			}
+			.popup_visible #fadeandscale_postomatic {
+					-webkit-transform: scale(1);
+						 -moz-transform: scale(1);
+							-ms-transform: scale(1);
+									transform: scale(1);
+			}
+			</style>
+
+			<!-- Blogger Popup -->
+
+			<div id="fadeandscale_blogger" class="well">
+				<button class="fadeandscale_blogger_close btn btn-default btn-close">Close</button>
+					<h3>Post-O-Matic</h3>
+					<p>
+						I made <a href="https://cryptic-hollows-52698.herokuapp.com/" id="link_underline" target="_blank">this simple blogging app</a> using Ruby on Rails, Bootstrap, and Heroku.
+						<br />
+						It has basic user authentification, allows for basic creation of articles, tagging articles, uploading images, editing and deleting articles.
+						<br />
+						<a href="https://github.com/ajzeller/rails_tutorial_sample_app" id="link_underline" target="_blank">View project on Github</a>
+					</p>
+					<a href="https://cryptic-hollows-52698.herokuapp.com/" target="_blank"><img src="images/blogger.png" alt="" /></a>
+			</div>
+
+			<style>
+			#fadeandscale_postomatic {
+					-webkit-transform: scale(0.8);
+						 -moz-transform: scale(0.8);
+							-ms-transform: scale(0.8);
+									transform: scale(0.8);
+			}
+			.popup_visible #fadeandscale_postomatic {
+					-webkit-transform: scale(1);
+						 -moz-transform: scale(1);
+							-ms-transform: scale(1);
+									transform: scale(1);
+			}
+			</style>
+
 			<script>
 			$(document).ready(function () {
 
@@ -639,6 +718,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					});
 
 					$('#fadeandscale_etchasketch').popup({
+							pagecontainer: '.container',
+							transition: 'all 0.3s',
+							color: '#000'
+					});
+
+					$('#fadeandscale_postomatic').popup({
+							pagecontainer: '.container',
+							transition: 'all 0.3s',
+							color: '#000'
+					});
+
+					$('#fadeandscale_blogger').popup({
 							pagecontainer: '.container',
 							transition: 'all 0.3s',
 							color: '#000'
