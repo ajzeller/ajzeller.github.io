@@ -1517,7 +1517,15 @@
 
 		ul.bulleted_list li {
 			text-align: left;
+
 		}
+
+		ul.bulleted_list li a {
+			text-decoration: underline;
+			text-decoration-color: rgba(0, 0, 0, 0.3);
+
+		}
+
 
 	ul.social {
 		cursor: default;
@@ -1673,6 +1681,11 @@
 			padding-left: 1em;
 		}
 
+		.youtube {
+			box-shadow: 0px 0px 1.5em rgba(0, 0, 0, 0.4);
+			border-radius: 0.5em;
+		}
+
 /* Box */
 
 	.box {
@@ -1746,7 +1759,7 @@
 			/*max-height: 500px;
 			width: 100%;*/
 
-			background-image: url("../../images/bishop_peak.jpg");
+			background-image: url("../../images/bishop_peak_2.jpg");
 			background-size: auto 135% ;
 			background-position: bottom;
 			box-shadow: 0 0 20px rgba(0,0,0,.4);
@@ -2046,7 +2059,7 @@
 			input[type="reset"],
 			button,
 			.button {
-				padding: .5em 1em;
+				padding: 0.4em 1em;
 				font-size: 1em;
 			}
 
@@ -2055,8 +2068,12 @@
 				input[type="reset"].big,
 				button.big,
 				.button.big {
-					font-size: 1.25em;
+					font-size: 1em;
 					letter-spacing: 0em;
+				}
+
+				.hero {
+					margin-right: 0.5em;
 				}
 
 		/* Box */
